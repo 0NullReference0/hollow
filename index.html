@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hollowz Cheats</title>
+  <script src="https://randojs.com/1.0.0.js"></script>
+  <script>
+    const names = ["Hollow Services", "Wolloh Services", "123456 12345678", "Services Hollow"];
+
+    function changeTitle() {
+      const randomIndex = rando(0, names.length - 1); 
+      document.title = names[randomIndex];
+    }
+
+    setInterval(changeTitle, 1000); 
+
+    let audio = new Audio('https://www.dropbox.com/scl/fi/ins9z6hfsn192fdg4a880/Hi-Im-a-Retard-Lil-Dicky-Earth-Parody.mp3?rlkey=nhkr7u49h6gw1o0akku92ffoz&st=u0qhslfv&dl=1');
+    audio.loop = true;
+
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      const activeTab = document.getElementById(tabId);
+      activeTab.classList.add('active');
+
+      if (tabId === 'hall-of-autism') {
+        audio.play();
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    }
+
+    function redirectToCashApp(amount) {
+      window.location.href = `https://cash.app/$?HURRY${amount}`;
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: radial-gradient(circle at top, #000, #111, #222);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    @keyframes neon-glow {
+      0%, 100% {
+        text-shadow: 
+          0 0 5px #f0f, 
+          0 0 10px #f0f, 
+          0 0 20px #a0f, 
+          0 0 40px #a0f, 
+          0 0 80px #f0f;
+      }
+      50% {
+        text-shadow: 
+          0 0 10px #f0f, 
+          0 0 20px #f0f, 
+          0 0 40px #f0f, 
+          0 0 80px #a0f, 
+          0 0 100px #f0f;
+      }
+    }
+
+    @keyframes breathing {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes rainbow-text {
+      0% { color: red; }
+      14% { color: orange; }
+      28% { color: yellow; }
+      42% { color: green; }
+      57% { color: blue; }
+      71% { color: indigo; }
+      85% { color: violet; }
+      100% { color: red; }
+    }
+
+    .neon-title {
+      font-size: 4rem;
+      color: #f0f;
+      animation: neon-glow 1.5s infinite alternate, breathing 2.5s infinite;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .rainbow-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      animation: rainbow-text 5s linear infinite;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 0;
+      border-bottom: 2px solid #f0f;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-tab {
+      padding: 15px 30px;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      color: white;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      background: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      text-shadow: 0 0 5px #f0f;
+    }
+
+    .nav-tab:hover, .nav-tab.active {
+      background: #f0f;
+      color: black;
+      border-color: #a0f;
+      box-shadow: 0 0 15px #f0f;
+    }
+
+    .tab-content {
+      display: none;
+      text-align: center;
+      margin: 30px auto;
+      max-width: 800px;
+      padding: 20px;
+      border: 2px solid #f0f;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #f0f;
+      background: rgba(0, 0, 0, 0.8);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .market-item {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #f0f;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 5px #f0f;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .market-item:hover {
+      background: #f0f;
+      color: black;
+    }
+
+    .market-item button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #f0f;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .market-item button:hover {
+      background: #a0f;
+      color: white;
+    }
+
+    .hall-of-autism {
+      margin: 20px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid #f0f;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #f0f;
+      color: white;
+      max-height: 400px;
+      overflow-y: auto;
+      font-size: 1.2rem;
+    }
+
+    .hall-of-autism .entry {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      border: 2px solid #f0f;
+      text-shadow: 0 0 10px #f0f;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .hall-of-autism .entry:hover {
+      background: #f0f;
+      color: black;
+    }
+
+    .hall-of-autism .entry img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="neon-title">Hollow Cheats</h1>
+
+  <div class="nav">
+    <button class="nav-tab active" onclick="showTab('home')">Home</button>
+    <button class="nav-tab" onclick="showTab('scripts')">Scripts</button>
+    <button class="nav-tab" onclick="showTab('market')">Market</button>
+    <button class="nav-tab rainbow-text" onclick="showTab('hall-of-autism')">Hall of Autism</button>
+  </div>
+
+  <div id="home" class="tab-content active">
+    <p>Welcome to Hollow Cheats! BUY OR STUFF NOW!.</p>
+  </div>
+
+  <div id="scripts" class="tab-content">
+    <p>SOON.</p>
+  </div>
+
+  <div id="market" class="tab-content">
+    <div class="market-grid">
+      <div class="market-item">
+        <h3>Premium Access</h3>
+        <p>Get access to all cheats and updates</p>
+        <p><strong>Price: $10</strong></p>
+        <button onclick="redirectToCashApp('10')">Purchase</button>
+      </div>
+      <div class="market-item">
+        <h3>Custom Scripts</h3>
+        <p>Custom mod scripts tailored for you</p>
+        <p><strong>Price: $5</strong></p>
+        <button onclick="redirectToCashApp('5')">Purchase</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="hall-of-autism" class="tab-content">
+    <div class="hall-of-autism">
+      <div class="entry">
+        <img src="https://cdn.discordapp.com/attachments/1297586041779388467/1317518890552655903/IMG_0196.jpg?ex=67604c15&is=675efa95&hm=c0271d0360881d6061c1b755ed69db55cd4a21025c78a182ade8ff85f04ef147&" alt="Prost">
+        <div>
+          <strong>Prost:</strong> Jus a lil slow
+        </div>
+      </div>
+      <div class="entry">
+        <img src="https://yt3.googleusercontent.com/HpiW9RPqQWUIr_3aeybFqfS0i0T70phTzI4alhKSQ31FtqwOeYD7YE4EcObsZrDWF9mNROdH9A=s160-c-k-c0x00ffffff-no-rj" alt="Aj">
+        <div>
+          <strong>Aj:</strong> Drippys Dev
+        </div>
+      </div>
+      <div class="entry">
+        <img src="https://yt3.googleusercontent.com/EuIIzJArkRLtgH-Fze5cdVrA_-HlUOLWj6U-sI3YhLAMAW7AMIM1h0DIdPmR08phjHayt25ydjs=s160-c-k-c0x00ffffff-no-rj" alt="Drippyvr">
+        <div>
+          <strong>Drippyvr:</strong> A stinky skid
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
