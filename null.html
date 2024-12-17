@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Null Profile</title>
+  <script src="https://randojs.com/1.0.0.js"></script>
+  <script>
+    const names = ["Null", "0", "null", "NULL"];
+    let audio = new Audio('Resources/Audio/Restart.mp3');
+    audio.loop = true;
+
+    function changeTitle() {
+      const randomIndex = rando(0, names.length - 1); 
+      document.title = names[randomIndex];
+    }
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.muted = !audio.muted;
+      }
+    }
+
+    setInterval(changeTitle, 100); // Smooth title transition
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #000000);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .neon-title {
+      font-size: 3rem;
+      color: #8b00ff;
+      text-shadow: 0 0 10px #8b00ff, 0 0 20px #ff00ff;
+      animation: glow 2s infinite alternate;
+      margin-top: 30px;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #8b00ff, 0 0 20px #ff00ff; }
+      100% { text-shadow: 0 0 20px #8b00ff, 0 0 40px #ff00ff; }
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.9);
+      position: sticky;
+      top: 0;
+      border-bottom: 2px solid #8b00ff;
+      z-index: 1000;
+    }
+
+    .nav button {
+      background: transparent;
+      border: 2px solid #8b00ff;
+      border-radius: 10px;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      margin: 0 10px;
+      cursor: pointer;
+      text-shadow: 0 0 5px #8b00ff;
+      transition: 0.3s ease;
+    }
+
+    .nav button:hover {
+      background: #8b00ff;
+      color: black;
+      box-shadow: 0 0 15px #ff00ff;
+    }
+
+    .socials-content {
+      margin: 50px auto;
+      max-width: 800px;
+      padding: 20px;
+      text-align: center;
+      border: 2px solid #8b00ff;
+      border-radius: 15px;
+      background: rgba(20, 20, 20, 0.95);
+      box-shadow: 0 0 20px #8b00ff;
+    }
+
+    .socials-content h1 {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #8b00ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff00ff;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="neon-title">Null</h1>
+
+  <div class="nav">
+    <button onclick="toggleAudio()">Song on/off</button>
+  </div>
+
+  <div id="socials" class="socials-content">
+    <h1 class="neon-title">About Me</h1>
+    <h2>Pronouns: He/Him</h2>
+    <h2>Discord: <a href="https://discord.gg/EpfaHPrAsH" target="_blank">https://discord.gg/EpfaHPrAsH</a></h2>
+  </div>
+</body>
+</html>
